@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style2.css">
+    <title>Formulario-Seguros</title>
+</head>
+<body>
+  <main>
+    <section class="row">
+      <section class="container-figure">
+        <h2>Seguro No Pagamos Cooperativa</h2>
+        <img src="./bgseguros2.jpg" alt="seguros">
+        <aside class="texto-venta">
+          <p>¡Aprovecha nuestra oferta especial por tiempo limitado!<br>
+            <strong>Si contratas un seguro premium, recibirás un descuento del 10% en tu primera prima.</strong><br> No pierdas esta oportunidad de proteger lo que más te importa.</p>
+        </aside>
+      </section>
+      <section class="container-form">
+        <h1 id="tituloH1">Solicitud de contacto</h1>
+        <form onsubmit="event.preventDefault(); enviarDatos();" id="myForm">
+          <label for="nombreInput">Nombre:</label>
+          <input type="text" id="nombreInput" name="nombre" placeholder="Ingresa tu Nombre">
+          <label for="apellidoInput">Apellido:</label>
+          <input type="text" id="apellidoInput" name="apellido" placeholder="Ingresa tu Apellido">
+          <label for="dniInput">DNI:</label>
+          <input type="text" id="dniInput" name="dni" placeholder="Ingresa el número de tu DNI">
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" name="email" placeholder="Ingresa tu e-mail">
+          <label for="telefonoInput">Teléfono:</label>
+          <input type="text" id="telefonoInput" name="telefono" placeholder="Ingresa tu número de teléfono">
+          <label for="tipoInput">Tipo de seguro:</label>
+          <select id="tipoInput" name="tipoSeguro">
+            <option value="basico">Básico</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="premium">Premium</option>
+          </select>
+          <input type="submit" value="Enviar" id="enviarBtn">
+        </form>
+        <aside class="texto-venta">
+          <p class="textoValor"><strong>El valor de tu seguro es: <span id="valorSeguro"></span></strong></p>
+        
+        </aside>
+      </section>
+    </section>
+  </main>
+  
+    <script src="./index.js"></script>
+</body>
+</html>
