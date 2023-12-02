@@ -1,10 +1,12 @@
 // Función para calcular el valor del seguro
 document.addEventListener('DOMContentLoaded', function() {
   const enviarBtn = document.getElementById('enviarBtn');
-  enviarBtn.addEventListener('click', function() {
+  enviarBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
     const tipoSeguro = document.getElementById('tipoInput').value;
     const valorSeguro = calcularValorSeguro(tipoSeguro);
     mostrarResultado(valorSeguro);
+    limpiarFormulario(); // Limpia los campos del formulario
   });
 
   const formInputs = document.querySelectorAll('input[type="text"], input[type="email"], select');
@@ -46,6 +48,16 @@ function checkFormEmpty() {
   });
 
   return isFormEmpty;
+}
+
+function limpiarFormulario() {
+  const formInputs = document.querySelectorAll('input[type="text"], input[type="email"], select');
+  
+  formInputs.forEach(function(input) {
+    input.value = ""; // Limpia el valor de cada campo
+  });
+
+  formInputs[0].focus(); // Coloca el cursor en el primer campo
 }
 
 
