@@ -88,8 +88,12 @@ html, body {
     text-align: center;
     font-weight: bold;
     margin-bottom: 30px;
-  }
-  
+  } 
+
+  input::placeholder,
+  textarea::placeholder {
+  color: rgba(0, 0, 0, 0.18);
+}
   input[type="submit"] {
     background-color: #04004b;
     color: white;
